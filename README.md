@@ -180,5 +180,21 @@ However, the configuration of a Kubernetes cluster can be a fiddly and time cons
 
 It should be pointed out that for this proof of concept, you have three seperate entities (The University, The Job Application Site, and the Personal Wallet Provider), in the real world, each of these would be maintaining their own operational environment. 
 
+## Summing Up
+
+I would identify three areas of generic functionality. 
+
+These should be created as templates that can cloned and modified to achieve different business purposes. 
+
+- Creating 'legacy' POC applications. (ie. applications pre-hyperledger integration). 
+
+   - For these, I would use a standard React/Node/Mongo (mLab) on a Docker container on Heroku/other cloud provider
+
+- Creating middleware API layer. 
+   - I would use Node on a Docker container running on Heroku/other cloud provider. 
+
+- Creating the wallet agents
+
+   - I would use either the Node Indy SDK or the Python Indy SDK, running on a docker container on Heroku/other cloud provider. 
 
 
